@@ -1,0 +1,91 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: linear-gradient(rgb(1, 1, 53), rgb(0, 0, 85), royalblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.bgContainer{
+    background: url("stars.png");
+    background-size: 100vw;
+    background-repeat: round;
+}
+
+input{
+    width: 22em;
+}
+
+/*eight ball*/
+#outside{
+    display: flex;
+    align-content: space-around;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2em;
+    width: 23em;
+    height: 23em;
+    padding: 50px;
+    background:radial-gradient(circle, black, rgb(37, 37, 37));
+}
+
+#inside{
+    background-color: rgba(0,0,255,0.5);
+    color: antiquewhite;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 9em;
+    height: 9em;
+    margin: auto;
+    padding: 3;
+    align-content: space-around;
+}
+
+#answerContainer{
+    position: relative;
+    top: 40%;
+}
+
+@media only screen and (max-width:700px){
+    #outside{
+        width: 70vw;
+        height: 70vw;
+    }
+    #inside{
+        width: 28vw;
+        height: 28vw;
+    }
+}
+/*animation*/
+.answerAnimation{
+    animation-name: shaken;
+    animation-duration: 1.5s;
+}
+
+@keyframes shaken{
+    0%{
+        background-color: blueviolet;
+        color:blueviolet;
+    }
+    25%{
+        background-color: darkblue;
+        color:darkblue;
+    }
+    50%{
+        background-color: royalblue;
+        color:royalblue;
+    }
+    75%{
+        background-color: blue;
+        color: blue;
+    }
+    100%{
+        background-color:rgba(0,0,255,0.5);
+        color:antiquewhite;
+    }
+}
+
+footer{
+    text-align: right;
+}
